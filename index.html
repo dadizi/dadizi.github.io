@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #f0f0f0;
+        }
+        
+        h1 {
+            margin-bottom: 15px;
+            color: #222;
+        }
+        
+        .bio {
+            margin-bottom: 30px;
+            font-size: 16px;
+            color: #555;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.1);
+            transform: scale(0);
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-link:hover::before {
+            transform: scale(1);
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .social-link.douyin {
+            background: linear-gradient(135deg, #FE2C55, #25F4EE);
+            color: white;
+        }
+        
+        .social-link.weibo {
+            background: linear-gradient(135deg, #E6162D, #FF9933);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="avatar.jpg" alt="头像" class="avatar">
+        <h1>你好，我是XXX</h1>
+        <p class="bio">
+            这里写一段简短的自我介绍，可以包括你的职业、兴趣爱好或任何你想分享的内容。
+            保持简洁明了，让访问者快速了解你。
+        </p>
+        <div class="social-links">
+            <a href="#" class="social-link douyin">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="#" class="social-link weibo">
+                <i class="fab fa-weibo"></i>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
