@@ -1,3 +1,4 @@
+'''
 photography-blog/
 ├── _config.yml          # Jekyll配置文件
 ├── index.md             # 首页
@@ -28,3 +29,4 @@ photography-blog/
 │       └── logo.png     # 网站logo
 └── _posts/              # 博客文章
     └── 2023-01-01-welcome.md
+'''
