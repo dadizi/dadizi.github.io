@@ -10,3 +10,11 @@ $max-width: 1200px;
 
 // 响应式断点
 $breakpoint-mobile: 768px;
+
+// 在 style.scss 中使用
+.btn {
+  background-color: $secondary-color;
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
