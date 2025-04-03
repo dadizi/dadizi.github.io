@@ -1,0 +1,10 @@
+<div class="gallery-preview">
+  {% for photo in site.gallery limit:3 %}
+    <div class="gallery-item">
+      <a href="{{ photo.url }}">
+        <img src="{{ photo.featured_image }}" alt="{{ photo.title }}">
+        <h3>{{ photo.title }}</h3>
+      </a>
+    </div>
+  {% endfor %}
+</div>
