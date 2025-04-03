@@ -77,7 +77,7 @@ p {
   transition: all 0.3s ease;
   
   &:hover {
-    background-color: darken(var(--secondary-color), 10%);
+    background-color: darken($secondary-color, 10%);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
