@@ -2,8 +2,10 @@
 ---
 
 // 导入变量和混合
+// 导入顺序：变量 → 混合 → 组件
 @import "variables";
 @import "mixins";
+@import "gallery";
 
 /* 基础样式 */
 :root {

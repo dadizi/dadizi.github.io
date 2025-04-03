@@ -1,0 +1,13 @@
+// 响应式媒体查询
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+// 弹性盒子布局
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

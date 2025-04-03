@@ -24,6 +24,15 @@ collections:
     output: true
     permalink: /gallery/:path/
 
+# 告诉 Jekyll 包含这些目录
+include:
+  - _sass
+
+# 或者使用 sass 配置指定加载路径
+sass:
+  sass_dir: _sass
+  style: compressed
+
 # 构建配置
 markdown: kramdown
 highlighter: rouge
