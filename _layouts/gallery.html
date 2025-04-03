@@ -1,15 +1,56 @@
----
-layout: default
----
-<article>
-  <h1>{{ page.title }}</h1>
-  <div class="gallery">
-    {% for image in page.images %}
-    <div class="gallery-item">
-      <img src="{{ image.url }}" alt="{{ image.caption }}">
-      <p>{{ image.caption }}</p>
-    </div>
-    {% endfor %}
-  </div>
-  {{ content }}
-</article>
+/* 相册样式 */
+.gallery {
+  padding: 3rem 0;
+  
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  
+  &-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      
+      img {
+        transform: scale(1.05);
+      }
+    }
+    
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      color: white;
+      padding: 1rem;
+      margin: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    &:hover .caption {
+      opacity: 1;
+    }
+  }
+}
