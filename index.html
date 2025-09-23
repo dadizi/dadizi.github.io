@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>累了?上网冲会儿浪!</title>
+    <title>简洁网址导航</title>
     <!-- 引入Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
@@ -53,7 +53,7 @@
             color: #1e293b;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
             display: flex;
             align-items: center;
         }
@@ -66,31 +66,36 @@
         .links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 15px;
         }
         
         .link-card {
             background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
             display: flex;
             align-items: center;
             text-decoration: none;
             color: inherit;
+            transition: background-color 0.2s ease;
+        }
+        
+        .link-card:hover {
+            background-color: #f1f5f9;
         }
         
         .favicon {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            margin-right: 15px;
+            width: 36px;
+            height: 36px;
+            border-radius: 6px;
+            margin-right: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: #f1f5f9;
             color: #3b82f6;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
         
         .link-info {
@@ -99,11 +104,12 @@
         
         .link-name {
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
+            font-size: 1rem;
         }
         
         .link-desc {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #64748b;
         }
         
@@ -121,17 +127,17 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             background-color: #3b82f6;
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            border: 1px solid #e2e8f0;
             transition: all 0.3s ease;
             opacity: 0;
             visibility: hidden;
@@ -145,8 +151,6 @@
         
         .back-to-top:hover {
             background-color: #2563eb;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
         }
         
         @media (max-width: 768px) {
@@ -161,16 +165,16 @@
             .back-to-top {
                 bottom: 20px;
                 right: 20px;
-                width: 45px;
-                height: 45px;
+                width: 40px;
+                height: 40px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>累了?上网冲会儿浪！</h1>
-        <p class="subtitle">这是一个小小的传送门【aturl.cn】</p>
+        <h1>简洁导航</h1>
+        <p class="subtitle">一个极简风格的网址导航，助您快速访问常用网站</p>
     </header>
     
     <main>
@@ -289,68 +293,10 @@
                 </a>
             </div>
         </section>
-        
-        <section class="category">
-            <h2 class="category-title"><i class="bi bi-camera-video"></i> 视频媒体</h2>
-            <div class="links-grid">
-                <a href="https://www.youtube.com" class="link-card" target="_blank">
-                    <div class="favicon"><i class="bi bi-youtube"></i></div>
-                    <div class="link-info">
-                        <div class="link-name">YouTube</div>
-                        <div class="link-desc">全球视频分享平台</div>
-                    </div>
-                </a>
-                
-                <a href="https://www.bilibili.com" class="link-card" target="_blank">
-                    <div class="favicon"><i class="bi bi-play-btn"></i></div>
-                    <div class="link-info">
-                        <div class="link-name">哔哩哔哩</div>
-                        <div class="link-desc">国内知名视频弹幕网站</div>
-                    </div>
-                </a>
-                
-                <a href="https://www.netflix.com" class="link-card" target="_blank">
-                    <div class="favicon"><i class="bi bi-film"></i></div>
-                    <div class="link-info">
-                        <div class="link-name">Netflix</div>
-                        <div class="link-desc">全球流媒体服务平台</div>
-                    </div>
-                </a>
-            </div>
-        </section>
-        
-        <section class="category">
-            <h2 class="category-title"><i class="bi bi-cart"></i> 购物平台</h2>
-            <div class="links-grid">
-                <a href="https://www.taobao.com" class="link-card" target="_blank">
-                    <div class="favicon"><i class="bi bi-bag"></i></div>
-                    <div class="link-info">
-                        <div class="link-name">淘宝</div>
-                        <div class="link-desc">阿里巴巴旗下购物网站</div>
-                    </div>
-                </a>
-                
-                <a href="https://www.jd.com" class="link-card" target="_blank">
-                    <div class="favicon"><i class="bi bi-box"></i></div>
-                    <div class="link-info">
-                        <div class="link-name">京东</div>
-                        <div class="link-desc">自营式电商企业</div>
-                    </div>
-                </a>
-                
-                <a href="https://www.amazon.com" class="link-card" target="_blank">
-                    <div class="favicon"><i class="bi bi-cart-check"></i></div>
-                    <div class="link-info">
-                        <div class="link-name">Amazon</div>
-                        <div class="link-desc">全球知名电商平台</div>
-                    </div>
-                </a>
-            </div>
-        </section>
     </main>
     
     <footer>
-        <p>aturl.cn | 还是那片海</p>
+        <p>© 2023 简洁导航 | 基于 GitHub Pages 部署 | 使用 Bootstrap Icons（MIT许可证）</p>
     </footer>
 
     <!-- 回到顶部按钮 -->
